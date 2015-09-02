@@ -11,4 +11,6 @@
  * Date: 2015-08-03T16:01Z
  */
  
- 
+ (function(global,$){
+	 
+ })(window,jQuery);
