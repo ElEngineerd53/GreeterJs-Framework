@@ -85,6 +85,26 @@
 			 this.validate();
 			 
 			 return this; 
+		 },
+		 HTMLGreeting: function(selector, formal) {
+			 // Throw an error if no jQuery is detected.
+			 if (!$){
+				 throw 'jQuery not loaded';
+			 }
+			 // Throw an error if there is no selector passed.
+			 if (!selector) {
+				 throw 'Missing jQuery selector';
+			 }
+			 var msg;
+			 if (formal) {
+				 msg = this.formalGreeting();
+			 }
+			 else {
+				 msg = this.greeting();
+			 }
+			 $(selector).html(msg);
+			 
+			 return this;
 		 } 
 	 };
 	 
